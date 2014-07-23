@@ -1,0 +1,1 @@
+include 'demoapp.ejb','demoapp.web','demoapp.ear'
