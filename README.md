@@ -6,6 +6,7 @@ This is your project! It is a sample, deployable Gradle JEE6 project, which uses
 * JEE Version 6.0 (JPA 2.0, EJB 3.1, Bean Validation 1.0, CDI 1.0, JAX-RS 1.0)
 * AngularJS (as REST Client) with Topcoat CSS library
 
+[![Build Status](https://martinreinhardt-online.de/jenkins/job/gradleJEE/badge/icon)](https://martinreinhardt-online.de/jenkins/job/gradleJEE/)
 
 The project shows essential JEE 6 technologies, like bean validation with Hibernate specific annotations and also custom validations (including JUnit)
 
