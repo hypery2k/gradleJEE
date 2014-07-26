@@ -13,10 +13,16 @@ dependencies {
 		    libDirName 'APP-INF/lib'  // put dependency libraries into APP-INF/lib inside the generated EAR;
 		                                // also modify the generated deployment descriptor accordingly
 		                                
-		    applicationName = "demoear"
+		    applicationName = 'demoear'
 	        initializeInOrder = true
-	        displayName = "Demo Ear"  // defaults to project.name
-	        description = "My customized EAR"  // defaults to project.description
+	        displayName = 'Demo Ear'  // defaults to project.name
+	        description = 'My customized EAR'  // defaults to project.description
+	        
+	        webModule('demoapp.web-' + project.version + '.war', '/demo') 
+
+        	securityRole 'admin'
+        	securityRole 'superadmin'
 	    }
-    }
+    } 
 }
+

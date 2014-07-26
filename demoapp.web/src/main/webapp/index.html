@@ -1,0 +1,72 @@
+<!--
+ JEE6 gradle-based Demo App
+ 
+ project https://github.com/hypery2k/gradleJEE
+ 
+ copyright 2014 Martin Reinhardt contact@martinreinhardt-online.de
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="ngJEE">
+<head>
+    <title>ngJEE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+    
+    <!-- Stylesheet for angular-mobile-nav  -->
+    <link rel="stylesheet" href="css/mobile-nav.css" type="text/css" />
+    
+    <!-- Include Topcoat -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-dark.css">
+    
+    <!-- CSS for this quickstart (TODO merge with desktop) -->
+    <link rel="stylesheet" href="css/mobile.css" type="text/css" />
+    
+</head>
+<body>
+
+    <!-- We use mobile-view rather than ng-view, to enable mobile transitions -->
+    <mobile-view />
+
+    <!-- In production use minified versions -->
+    
+    <!-- Load angularjs -->
+    <script src="js/libs/angular.js"></script>
+    
+    <!-- Load angular-resource, which allows us to interact with REST resources as high level services -->
+    <script src="js/libs/angular-resource.js"></script>
+    
+    <!-- Load angular-mobile-nav which allows transitions between partials -->
+    <script src="js/libs/mobile-nav.js"></script>
+    <!-- Load angular-mobile -->
+    <script src="js/libs/angular-mobile.js"></script>
+    
+    <!-- Load the controllers for our app -->
+    <script src="js/controllers.js"></script>
+    
+    <!-- Load the application wide JS, such as route definitions -->
+    <script src="js/app.js"></script>
+    
+    <!-- Load the services we have defined for the application, particularly the REST services -->
+    <script src="js/services.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+ JEE6 gradle-based Demo App
+ 
+ project https://github.com/hypery2k/gradleJEE
+ 
+ copyright 2014 Martin Reinhardt contact@martinreinhardt-online.de
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+-->
+<div ng-controller="MainCtrl">
+	<div class="topcoat-overlay-bg" ng-show="showInfo"></div>
+	<aside class="topcoat-overlay info-overlay" ng-show="showInfo">
+	    <div class="topcoat-icon-button--quiet close-button">
+	       <i class="topcoat-icon close-icon" ng-click="closeOverlay()"></i>
+	    </div>
+		<div class="dual-brand">
+			<img src="gfx/dualbrand_logo.png" />
+		</div>
+
+		<div id="aside">
+			<p>Learn more about JBoss Enterprise Application Platform 6.</p>
+			<ul>
+				<li><a
+					href="https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/">Documentation</a></li>
+				<li><a href="http://red.ht/jbeap-6">Product Information</a></li>
+			</ul>
+			<p>Learn more about JBoss AS 7.</p>
+			<ul>
+				<li><a
+					href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction">Getting
+						Started Developing Applications Guide</a></li>
+				<li><a href="http://jboss.org/jbossas">Community Project
+						Information</a></li>
+			</ul>
+		</div>
+		<footer id="footer">
+			<p>
+				This project was generated from a Maven archetype from JBoss.<br />
+			</p>
+		</footer>
+	</aside>
+</div>

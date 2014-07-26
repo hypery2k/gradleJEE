@@ -1,26 +1,40 @@
-apply plugin: "eclipse"
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
 
-subprojects {
+}
 
+allprojects {
+	// add eclipse plugin for all projects
 	apply plugin: "eclipse"
+    
+	version = "0.1-SNAPSHOT"
+}
+
+subprojects {	
 
     apply plugin: "java"
-
-    version = "0.1-SNAPSHOT"
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        compile "javax:javaee-api:6.0"
+    	// JEE 6 API       
+       	// use concrete API to avoid 'java.lang.ClassFormatError: Absent Code attribut...'
+        compile				'org.jboss.spec:jboss-javaee-6.0:1.0.0.Final'
         
         // Logging
-		compile 'org.slf4j:slf4j-api:1.7.7'
-		compile 'org.slf4j:jcl-over-slf4j:1.7.7'
-		compile 'org.slf4j:jul-to-slf4j:1.7.7'
-	    compile 'org.slf4j:slf4j-log4j12:1.7.7'
-	    compile 'log4j:log4j:1.2.17'
+		compile 			'org.slf4j:slf4j-api:1.7.7',
+		 					'org.slf4j:jcl-over-slf4j:1.7.7',
+							'org.slf4j:jul-to-slf4j:1.7.7',
+	    					'org.slf4j:slf4j-log4j12:1.7.7',
+	    					'log4j:log4j:1.2.17'
+	    						    					
+	    // Testing
+	    testCompile			'junit:junit:4.11'
     }
 
 }
