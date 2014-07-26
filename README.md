@@ -23,5 +23,4 @@ Demo is available under:
         For Linux:   JBOSS_HOME/bin/standalone.sh
         For Windows: JBOSS_HOME\bin\standalone.bat
 * Copy the ear to JBOSS_HOME/standalone/deployments
-* WebApp is showing up under http://localhost:8080/demoapp.web-0.1-SNAPSHOT
-
+* WebApp is showing up under http://localhost:8080/demo
