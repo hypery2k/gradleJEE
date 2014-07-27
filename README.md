@@ -10,8 +10,6 @@ This is your project! It is a sample, deployable Gradle JEE6 project, which uses
 
 The project shows essential JEE 6 technologies, like bean validation with Hibernate specific annotations and also custom validations (including JUnit)
 
-See livedemo here: http://cloud01.martinreinhardt-online.de:8080/demo/
-
 ## Requirements
 * Local JBoss EAP6+, JBoss AS7+ or Wildfly8+
 * Eclipse 4.2+
@@ -19,7 +17,7 @@ See livedemo here: http://cloud01.martinreinhardt-online.de:8080/demo/
 
 ## Usage
 
-Demo is available under: 
+Demo is available under:  http://cloud01.martinreinhardt-online.de:8080/demo/
 
 * Start JBoss Enterprise Application Platform 6 or JBoss AS 7 with the Web Profile, open a command line and navigate to the root of the JBoss server directory.
 * The following shows the command line to start the server with the web profile:
