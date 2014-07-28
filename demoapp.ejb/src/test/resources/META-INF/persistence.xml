@@ -10,13 +10,9 @@
       <property name="hibernate.archive.autodetection" value="class" />
       <property name="hibernate.show_sql" value="false" />
       <property name="hibernate.format_sql" value="true" />
-      <property name="hibernate.hbm2ddl.auto" value="create" />
+      <property name="hibernate.hbm2ddl.auto" value="create-drop" />
       <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false" />
       <property name="hibernate.connection.characterEncoding" value="UTF-8" />
-      <property name="hibernate.transaction.flush_before_completion" value="true" />
-      <property name="hibernate.transaction.auto_close_session" value="false" />
-      <property name="hibernate.search.default.directory_provider" value="org.hibernate.search.store.FSDirectoryProvider" /> <!-- directory where the indexes will be stored -->
-      <property name="hibernate.search.default.indexBase" value="./dvdindexes" />  <!-- database specific settings -->
 
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
       <property name="hibernate.connection.driver_class" value="org.h2.Driver" />

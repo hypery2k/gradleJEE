@@ -45,45 +45,47 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import de.martinreinhardt.jee.domain.validation.ValidateDateRange;
+
 /**
  * Simple domain entity showing bean validation and JPA persistence
  * 
  * @author mreinhardt
  * 
  */
-@SuppressWarnings("serial")
 @Entity
 @XmlRootElement
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Member implements Serializable {
 
+	/**
+	 * Serial ID
+	 */
+	private static final long serialVersionUID = -4487148904048943780L;
+
 	@Id
 	@GeneratedValue
-	private Long   id;
+	private Long              id;
 
 	@NotNull
 	@Size(min = 1, max = 25)
 	@Pattern(regexp = "[^0-9]*", message = "Must not contain numbers")
-	private String name;
+	private String            name;
 
 	@NotNull
 	// Custom Hibernate Validator
 	@NotEmpty
 	@Email
-	private String email;
+	private String            email;
 
 	@NotNull
 	@Size(min = 10, max = 12)
 	@Digits(fraction = 0, integer = 12)
 	@Column(name = "phone_number")
-	private String phoneNumber;
+	private String            phoneNumber;
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -108,5 +110,32 @@ public class Member implements Serializable {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Member [");
+		if (id != null) {
+			builder.append("id=");
+			builder.append(id);
+			builder.append(", ");
+		}
+		if (name != null) {
+			builder.append("name=");
+			builder.append(name);
+			builder.append(", ");
+		}
+		if (email != null) {
+			builder.append("email=");
+			builder.append(email);
+			builder.append(", ");
+		}
+		if (phoneNumber != null) {
+			builder.append("phoneNumber=");
+			builder.append(phoneNumber);
+		}
+		builder.append("]");
+		return builder.toString();
 	}
 }

@@ -1,7 +1,7 @@
 /**
  * JEE6 gradle-based Demo App
  *
- * File: DomainValidationTest.java, 25.07.2014, 10:49:55, mreinhardt
+ * File: ValidateDateRange.java, 28.07.2014, 10:49:55, mreinhardt
  *
  * @project https://github.com/hypery2k/gradleJEE
  *
@@ -26,38 +26,54 @@
  * SOFTWARE.
  *
  */
-package de.martinreinhardt.jee.domain;
+package de.martinreinhardt.jee.domain.validation;
 
-import static org.junit.Assert.assertEquals;
+import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-import java.util.Set;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
 
-import javax.validation.ConstraintViolation;
-
-import org.junit.Test;
-
-import de.martinreinhardt.jee.util.ValidationTestBase;
+import javax.validation.Constraint;
+import javax.validation.Payload;
 
 /**
- * Simple validation example unit test
+ * Simply checks if the given start date is before the end date
  * 
  * @author mreinhardt
  * 
  */
-public class DomainValidationTest extends ValidationTestBase {
+@Target({ TYPE, ANNOTATION_TYPE })
+@Retention(RUNTIME)
+@Constraint(validatedBy = { DateRangeValidator.class })
+@Documented
+public @interface ValidateDateRange {
+
+	String message() default "{validation.date.range_error}";
+
 	/**
-   * Checks if valid member is showing no errors
-   */
-  @Test
-  public void testValidMemberr() {
-  	Member validMember = new Member();
-  	validMember.setEmail("abc@test.de");
-  	validMember.setName("Max");
-  	validMember.setPhoneNumber("1234567890");
+	 * end date
+	 * 
+	 * @return
+	 */
+	String start();
+	/**
+	 * end date
+	 * 
+	 * @return
+	 */
+	String end();
 
-    // check validation
-    Set<ConstraintViolation<Member>> constraintViolations = validator.validate(validMember);
-    assertEquals(0, constraintViolations.size());
-  }
+	/**
+	 * use this property to let the start and date be equal
+	 * 
+	 * @return
+	 */
+	boolean equal() default false;
 
+	Class<? extends Payload>[] payload() default {};
+
+	Class<?>[] groups() default {};
 }
