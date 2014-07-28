@@ -2,5 +2,5 @@ apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
 dependencies {
-    compile project(':demoapp.ejb')
+    providedCompile project(':demoapp.ejb')
 }

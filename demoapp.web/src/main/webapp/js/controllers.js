@@ -76,7 +76,7 @@ function MembersCtrl($scope, $http, Members) {
             } else {
                 $scope.errorMessages = [ 'Unknown  server error' ];
             }
-            $scope.$apply();
+           // $scope.$apply();
         });
 
     };

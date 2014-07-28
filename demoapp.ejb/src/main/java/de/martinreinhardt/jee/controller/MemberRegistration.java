@@ -28,14 +28,15 @@
  */
 package de.martinreinhardt.jee.controller;
 
-import de.martinreinhardt.jee.domain.Member;
+import java.util.logging.Logger;
 
+import javax.annotation.security.PermitAll;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import java.util.logging.Logger;
+import de.martinreinhardt.jee.domain.Member;
 
 /**
  * Controller for the member registration process.
@@ -47,6 +48,7 @@ import java.util.logging.Logger;
  * 
  */
 @Stateless
+@PermitAll
 public class MemberRegistration {
 
 	@Inject
